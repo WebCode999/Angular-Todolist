@@ -1,0 +1,11 @@
+.header {
+  background: #333333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+}
