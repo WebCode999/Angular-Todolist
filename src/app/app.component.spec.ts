@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'angular-crash-todolist'`, () => {
+  it(`should have as title 'Todo list'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('angular-crash-todolist');
+    expect(app.title).toEqual('Todo list');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('angular-crash-todolist app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('Todo list app is running!');
   });
 });
