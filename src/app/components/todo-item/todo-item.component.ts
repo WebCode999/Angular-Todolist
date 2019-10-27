@@ -23,14 +23,14 @@ export class TodoItemComponent implements OnInit {
     };
     return classes;
   }
-  onToggle(todo) {
+  onToggle(todo: Todo) {
     // Toggle in UI
     todo.completed = !todo.completed;
     // Toggle on Server
-    this.todoService.toggleCompleted(todo).subscribe(todo =>
-      console.log(todo));
+    // tslint:disable-next-line:no-shadowed-variable
+    this.todoService.toggleCompleted(todo).subscribe(todo => console.log(todo));
   }
-  onDelete(todo) {
+  onDelete(todo: { deleteTodo: { emit: (arg0: any) => void; }; }) {
     todo.deleteTodo.emit(todo);
   }
 }
